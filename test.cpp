@@ -5,5 +5,5 @@ int main(){
 
     TimeTravellingCellar c;
 
-    std::cout << c.determineProfit({1,2,3},{3,1,2});
+    std::cout << c.determineProfit({7116,8936},{9309,536});
 }
