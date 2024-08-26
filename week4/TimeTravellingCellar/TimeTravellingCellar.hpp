@@ -79,6 +79,7 @@ public:
         else 
             output =  std::min((std::get<1>(profit2)-std::get<0>(decay1)),std::get<1>(profit1)-std::get<0>(decay2));
 
+        return output;
     };
     
 };
