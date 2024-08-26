@@ -76,13 +76,14 @@ public:
 
             if (genderFlip == true){
 
-                output.push_back(boys[numBoys-i]);
+                output.insert(output.begin()+i+1,boys[i]);
                 output.insert(output.begin()+i+1,girls[i]);
 
             }
             else {
+                output.push_back(boys[i]);
                 output.push_back(girls[i]);
-                output.insert(output.begin()+i+1,boys[i]);
+                
             }
 
             genderFlip = false;
