@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <sstream>
 #include <math.h>
+#include <iostream>
 
 class PartySeats
 {
@@ -59,6 +60,10 @@ public:
         //sort gender vectors
         std::sort(boys.begin(),boys.end());
         std::sort(girls.begin(), girls.end());
+
+        std::cout << boys[0] << boys[1];
+
+
         
         std::vector<std::string> output;
 
@@ -71,7 +76,7 @@ public:
 
             if (genderFlip == true){
 
-                output.push_back(boys[i]);
+                output.push_back(boys[numBoys-i]);
                 output.insert(output.begin()+i+1,girls[i]);
 
             }

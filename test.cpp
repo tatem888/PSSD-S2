@@ -1,9 +1,10 @@
-#include "week4/TimeTravellingCellar/TimeTravellingCellar.hpp"
+#include "week4/PartySeats/PartySeats.hpp"
 #include <iostream>
 
 int main(){
 
-    TimeTravellingCellar c;
+    PartySeats c;
 
-    std::cout << c.determineProfit({7116,8936},{9309,536});
+    c.seating({"BOB boy","SAM girl","DAVE boy","JO girl"}
+);
 }
