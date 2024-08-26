@@ -73,6 +73,12 @@ Problem 3 - Time travelling Cellar
 To solve this problem, i would simply need to find the maximum value from the profit vector, and the minimum from the decay vector. 
 Upon implementing this solution, i realised there were some cases where the max profit and minimum decay would be from the same cellar. if this was the case, then i would try the second best profit with the minimum decay, and the second minimum decay with the max profit, and take the best result of the two
 
+In the end, i spent most of my time debugging some flaws in the logic that i coded wrong, but i was able to progressivly find them all through testing.
+
+Problem 4 - Party seats
+
+My first thought is that i need to seperate the string of names into  alist of boys and a list of girls, and then sort those two lists lexigraphically. Once i have the sorted lists, i can alternate, inserting a girl next ot the host then a boy next to the hostess and so on unitl the list is complete
+with sorted lists, i will also be able to tell if there is a valid nbumber of guests before attempting to create a seating plan.
 
 
 
