@@ -19,8 +19,8 @@ public:
         std::tuple <int,int> decay1;
         std::tuple <int,int> decay2;
 
-        decay1 = std::make_tuple(0,INT_MAX);
-        decay2 = std::make_tuple(0,INT_MAX);
+        decay1 = std::make_tuple(0,10001);
+        decay2 = std::make_tuple(0,10001);
 
 
         int numberOfCellars = profit.size();
