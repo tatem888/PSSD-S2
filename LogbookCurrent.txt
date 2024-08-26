@@ -52,6 +52,27 @@ during my implementation, i realised that i cannot use switch statements for str
 I was initially stuck on how to handle the case of "LEFT X", and "RIGHT X" but after looking into string manupulation i was able to seperate the string into its substrings and extract the value so i knw how much i needed to turn the robot by
 
 
+Weeek 4 Logbook
+
+Problem 1 - Magic Spell
+
+My initial plan to approach this problem was to loop over the spell string and take the As and Zs and place them on a stack (last in, first out). Then, the string could be looped again, popping the next element from the stack each time an A or Z was found in the string, and replacing it in the decrypted string.
+This would reverse the As and Zs without changing the placement of any other letters which need to remain the same.
+
+I was happy with this approach, and it didnt pose any problems when i was implementing it, and it also gave me a chance to work with the queue data structure more. There isnt a massive problem with the run time of the code either as i only need O(n) time.
+
+
+Problem 2 - Arrows
+
+I started approaching this problem assuming that the largest arrow could be found simply by finding the longest stretch of unbroken '-' or '=' and adding 1. This would work for some cases, but when the string didnt contain a '<' or '>' character in the correct place, this could create an incorrect output.
+therefore, i decided to approach the problem by searching for '<' and '>' characters and foiwards or backwards from there, dependding on the direction of the arrow.
+
+
+Problem 3 - Time travelling Cellar
+
+To solve this problem, i would simply need to find the maximum value from the profit vector, and the minimum from the decay vector. 
+Upon implementing this solution, i realised there were some cases where the max profit and minimum decay would be from the same cellar. if this was the case, then i would try the second best profit with the minimum decay, and the second minimum decay with the max profit, and take the best result of the two
+
 
 
 
