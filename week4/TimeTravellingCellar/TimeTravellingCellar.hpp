@@ -13,13 +13,13 @@ public:
         std::tuple <int,int> profit1;
         std::tuple <int,int> profit2;
 
-        profit1 = std::make_tuple(0,0);
+        profit1 = std::make_tuple(0,profit[0]);
         profit2 = std::make_tuple(0,0);
 
         std::tuple <int,int> decay1;
         std::tuple <int,int> decay2;
 
-        decay1 = std::make_tuple(0,10001);
+        decay1 = std::make_tuple(0,decay[0]);
         decay2 = std::make_tuple(0,10001);
 
 
@@ -27,7 +27,7 @@ public:
 
 
         //loop over profit and decay vectors, store highest and second highest values in respective tuple
-        for (int i = 0; i < numberOfCellars; i++)
+        for (int i = 1; i < numberOfCellars; i++)
         {
             
             //profits
@@ -43,8 +43,8 @@ public:
             //if current profit is 2nd max profit
             else if (profit[i] > std::get<1>(profit2) && profit[i] <= std::get<1>(profit1))
             {
-                std::get<0>(profit1) = i;
-                std::get<1>(profit1) = profit[i];
+                std::get<0>(profit2) = i;
+                std::get<1>(profit2) = profit[i];
             }
 
             //decay
@@ -60,8 +60,8 @@ public:
             //if current decay is 2nd min decay
             else if (decay[i] < std::get<1>(decay2) && decay[i] >= std::get<1>(decay1))
             {
-                std::get<0>(decay1) = i;
-                std::get<1>(decay1) = decay[i];
+                std::get<0>(decay2) = i;
+                std::get<1>(decay2) = decay[i];
   
             }
         
