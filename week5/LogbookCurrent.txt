@@ -1,0 +1,13 @@
+Problem Solving and Software Development S2 2024
+
+Logbook 5 - Tate Manning - a1821633
+
+Question 1 - Multiples
+
+For my first questions, i decided to pick some of the easier/beginer questions so that i could practice coding under some time pressure. I set myself two hours and will attempted to complete both the Multiples and one other question frommthe week 5 set.
+
+For Multiples, it seemed to me that there was a mathematical way i could solve the problem without needing to loop through the whole range of numbers. I set myself 15 minutes to try and find a mathematical solution, and if i cannot work it out and start coding, i will revert to a loop solution
+I found that if i calculated the max divided by the factor (rounded down to nearest int) would give me the total of numbers from 0 to max that are evenly divisbly. i can then subtract the min divided by factor (rounded down again) to find how many are outside the range.
+
+
+
