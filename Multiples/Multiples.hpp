@@ -6,13 +6,15 @@ public:
 
         int maxNumber = max/factor;
         int minNumber = min/factor;
+        int output;
 
         if (min != 0){
-            return maxNumber - minNumber;
+            output = maxNumber - minNumber;
         }
         else {
-            return maxNumber + 1;
+            output = maxNumber + 1;
         }
+        return output;
     };
     
 };
