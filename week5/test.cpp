@@ -4,7 +4,7 @@
 int main(){
 
     Multiples a;
-    std::cout << a.number(-75312,407891,14);
+    std::cout << a.number(-123456,654321,997);
 
     
 }
