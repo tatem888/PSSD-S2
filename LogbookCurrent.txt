@@ -1,58 +1,13 @@
 Problem Solving and Software Development S2 2024
 
-Logbook - Tate Manning - a1821633
+Logbook 5 - Tate Manning - a1821633
 
+Question 1 - Multiples
 
-Week 1
+For my first questions, i decided to pick some of the easier/beginer questions so that i could practice coding under some time pressure. I set myself two hours and will attempted to complete both the Multiples and one other question frommthe week 5 set.
 
-Problem 1 - Inchworm
-
-Design Thinking:
-Initially, I though of two solutions to the problem. The first would involve creating a vector of 0s with 1s at every point where a leaf would be present. Then, i could iterate through the vector, and every time the inchworm was due to rest, It would check the corresponding value in the vector to determine if there was a leaf there. This solution would work, but i also thought that there could be a mathematical solution that wouldn't require me to check branches where the worm doesn't rest or where there is a leaf. I decided to focus on a mathematical approach, as it will likely be more efficient than the vector approach.
-
-Troubleshooting:
-I was able to implement the solution using the modulo operator to determine whether at each rest stop there would also be a leaf, and repeating this at each rest stop until the end of the branch was reached.
-The main issue that I ran into was with the upload and submission, where I took some time to get the files and submissions in the correct format.
-I also had some issues with the implementation of the for loop where i wasnt accessing the last node of the branch.
-
-Problem 2 - ThrowTheBall
-
-My first thought for this problem was to implement a cyclic list that would closely represent the actual circle of friends, being a doubly linked list where the first and last elements would be linked.
-This implementation would be tough and id have to make sure i kept good track of the pointers and current position of the ball. 
-A second implementation was to again make use of the modulo operator, so that if i iterated past the end of the list on a certain pass, i could tell where it would be as the position would be the mod of the index and the number of players.
-This way, i could just use a vector that tracked how many times the ball fell on each position.
-
-I ended up implementing the program in the second way, and it worked out to be alot more straightfoward than i had imagined. Once i confirmed that the modulo operator would give me the correct operation i was looking for, i was easily able to implement it for a left and right hand pass (depending on the even or odd amount of receptions for each player)
-I just had to ensure that i was working with the correct values, as my program initially ran into issues when i was trying to access negative elements. 
-
-Problem 3 - Street Parking
-
-My plan for this problem is to itterate through the 'street' string and at each section of road, mark down in a seperate vector any spots that are unavaliable to park in. By initially assuimg that all spots are open and only marking them as unavaliable when a condition is met, i should be able to cover all of the spots.
-i will then have a vector that highlights exactly where i can park, and it will also have accounted for any double ups that could be caused by a driveway and bus stop being next to eachother for example
-
-some things i had to look into to help solve this problem were how to get the lenght of a string, so that i could make a corresponding vector with valid parking
-Mainly familiarising myself with string operations
-
-I also had to work on accessing out of bounds values, as my program had the posibility to access values outside of the street if for example a bus stop was in the first position, it would try to access the two positions before the bus stop, whihc in that case dont exist
-to work around this, i used the .at() function and a try-catch pair to handle the excpetion that the .at() fucntion would throw if it accessed an put of range element.
-
-Problem 4 - SquareOfDigits
-
-My idea is to iterate over each of the points in the grid, and at each point, check if the corresponding 'square' points create a valid square. The program wil keep track of the largest square that it has currently found, so it will not need to check cases of swuares that are smaller, only larger.
-There will also be points where the program would need to check out of bounds to find a potentially bigger square, so at this point i will know that a larger square couldnt exist, and i will be able to disregard those tests. I believe this will be easier for me to visualise once i have a basic implementation in place.
-
-After begining my implementation, i realised that i could check the all the possible squares from largest to smallest, as if i find a square of the max size i could retunr the answer straight away without haveung to check the rest of the grid, and if i didnt find it i could iterate down to the next largest square
-
-Problem 5 - AzimuthMonitoring
-
-This problem seems straight foward, i plan to use a number of switch statemnts for each of the possible moves for the robot, and keeping track of its current direction until the last instruction is reached.
-
-during my implementation, i realised that i cannot use switch statements for strings, so for ease of coding i changed the switch to an else-if ladder.
-
-I was initially stuck on how to handle the case of "LEFT X", and "RIGHT X" but after looking into string manupulation i was able to seperate the string into its substrings and extract the value so i knw how much i needed to turn the robot by
-
-
-
+For Multiples, it seemed to me that there was a mathematical way i could solve the problem without needing to loop through the whole range of numbers. I set myself 15 minutes to try and find a mathematical solution, and if i cannot work it out and start coding, i will revert to a loop solution
+I found that if i calculated the max divided by the factor (rounded down to nearest int) would give me the total of numbers from 0 to max that are evenly divisbly. i can then subtract the min divided by factor (rounded down again) to find how many are outside the range.
 
 
 
