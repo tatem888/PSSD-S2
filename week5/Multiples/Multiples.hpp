@@ -4,24 +4,6 @@ class Multiples
 {
 
 public:
-    int oldNumber(int min, int max, int factor){
-
-        int maxNumber, minNumber, output;
-        
-        maxNumber = max/factor;
-        minNumber = min/factor;
-        
-        //std::cout << maxNumber << " " << minNumber;
-
-        
-        if (min > 0){
-            output = maxNumber - minNumber;
-        }
-        else {
-            output = maxNumber - (minNumber-1);
-        }
-        return output;
-    };
     
     int number(int min, int max, int factor){
 
