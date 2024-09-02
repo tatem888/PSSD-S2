@@ -9,5 +9,9 @@ For my first questions, i decided to pick some of the easier/beginer questions s
 For Multiples, it seemed to me that there was a mathematical way i could solve the problem without needing to loop through the whole range of numbers. I set myself 15 minutes to try and find a mathematical solution, and if i cannot work it out and start coding, i will revert to a loop solution
 I found that if i calculated the max divided by the factor (rounded down to nearest int) would give me the total of numbers from 0 to max that are evenly divisbly. i can then subtract the min divided by factor (rounded down again) to find how many are outside the range.
 
+When implementing, i ran into trouble with somee of the edge cases, and in the interest of time i decided to implement a for loop, which i knew was a less efficient solution but it was easier for me to implement.
 
+Question 2 - Barbecue
+
+I first thought i shopuld create two vectors that kept track of how many votes each member recieved, and how many each cast. Then i could check those vevcotrs to determine who would be excluded.
 
