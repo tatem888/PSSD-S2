@@ -13,5 +13,11 @@ When implementing, i ran into trouble with somee of the edge cases, and in the i
 
 Question 2 - Barbecue
 
-I first thought i shopuld create two vectors that kept track of how many votes each member recieved, and how many each cast. Then i could check those vevcotrs to determine who would be excluded.
+I first thought i shopuld create two vectors that kept track of how many votes each member recieved, and how many each cast. Then i could check those vevcotrs to determine who would be excluded. If there were ties, i would take all the highest voted individuals and find the one out of them that cast the most votes.
+This worked, but i initially had some toruble trying to sort the ties out correctly. I also had some out of bounds errors with my loops but they were easy to fix after some testing.
+
+
+Weekly Reflection
+I didnt leave myself enough time this week to practice my coding which i am disapointed in. In the coming weeks as myy schedule is less busy i plan to put more effort into practicing and doing some extra problems when i get the time. I was happy tih week to work on my coding speed however, and i found that completing the problems under time pressure led me to think about how i approached the problems differently, and overall will be good experience fgor the practical exams.
+
 
