@@ -14,43 +14,49 @@ public:
         for (int i = 0; i < n; i++)
         {
             //add to votes cast
-            votesCast[voter[i]] = votesCast[voter[i]] + 1;
+            votesCast[voter[i]] ++;
 
             //add to votes recieved
-            votesRecieved[excluded[i]] = votesRecieved[excluded[i]] + 1;
+            votesRecieved[excluded[i]] ++;
         }
 
+        //find max votes recieved
         int maxVotesRecieved = *std::max_element(votesRecieved.begin(), votesRecieved.end());
 
-        std::vector<int> maxVotesRecievedIndex;
+        std::vector<int> excludedCandidates;
 
         //add index of highest vote getters to vector
         for (int i = 0; i < n; i++)
         {
             if (maxVotesRecieved == votesRecieved[i])
             {
-                maxVotesRecievedIndex.push_back(i);
+                excludedCandidates.push_back(i);
             }
             
         }
 
-        // if only one highest vote getter, output index
+        //resolve tie
 
-        int output = maxVotesRecievedIndex[0];
-
-        std::vector<int> mostCastValues;
-
-        if (maxVotesRecievedIndex.size() > 1){
-
-            for (int i = 0; i < maxVotesRecievedIndex.size(); i++)
-            {
-                 mostCastValues.push_back(votesCast[maxVotesRecievedIndex[i]]);
-            }
+        if (excludedCandidates.size() > 1){
+            int maxVotesCast = -1;
+            int maxVoteCaster = -1;
             
 
-        }      
-        
-        return output;
+            for (int i : excludedCandidates)
+            {
+                if (votesCast[i] > maxVotesCast){
+                    maxVotesCast = votesCast[i];
+                    maxVoteCaster = i;
+                }
+            }
+            excludedCandidates.clear();
+            excludedCandidates.push_back(maxVoteCaster);
+
+        }
+               
+
+
+        return excludedCandidates[0];
         
          
     };
