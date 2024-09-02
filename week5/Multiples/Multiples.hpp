@@ -4,11 +4,12 @@ class Multiples
 {
 
 public:
-    int number(int min, int max, int factor){
+    int oldNumber(int min, int max, int factor){
 
         int maxNumber, minNumber, output;
-        maxNumber = floor(max/factor);
-        minNumber = floor(min/factor);
+        
+        maxNumber = max/factor;
+        minNumber = min/factor;
         
         //std::cout << maxNumber << " " << minNumber;
 
@@ -22,5 +23,18 @@ public:
         return output;
     };
     
+    int number(int min, int max, int factor){
+
+        int divisibleCount = 0;
+        
+        for (int i = min; i <= max; i++)
+        {
+            if (fmod(i,factor) == 0){
+                divisibleCount++;
+            }
+        }
+        
+        return divisibleCount;
+    }
 };
 
