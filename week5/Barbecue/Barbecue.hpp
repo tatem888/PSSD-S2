@@ -1,5 +1,6 @@
 #include <vector>
 #include <bits/stdc++.h>
+#include <iostream>
 
 class Barbecue
 {
@@ -11,7 +12,7 @@ public:
         
 
         //loop to collect vote casters and recievers
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < voter.size(); i++)
         {
             //add to votes cast
             votesCast[voter[i]] ++;
@@ -38,6 +39,7 @@ public:
         //resolve tie
 
         if (excludedCandidates.size() > 1){
+            
             int maxVotesCast = -1;
             int maxVoteCaster = -1;
             

@@ -1,10 +1,13 @@
-#include "Multiples/Multiples.hpp"
+#include "Barbecue/Barbecue.hpp"
 #include <iostream>
 
 int main(){
 
-    Multiples a;
-    std::cout << a.number(-123456,654321,997);
+    Barbecue a;
+    std::cout << a.eliminate(5,
+{4,3,1,0},
+{2,2,3,3}
+);
 
     int x = -15;
     int y = 5;
