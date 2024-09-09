@@ -6,6 +6,6 @@
 int main(){
 
     GoodHours a;
-    std::cout << a.howMany("11:11","11:12"
-);
+
+    std::cout << a.howMany("00:56","12:32");
     }
