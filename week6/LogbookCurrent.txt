@@ -1,0 +1,12 @@
+Problem Solving and Software Development S2 2024
+
+Logbook - Tate Manning - a1821633
+
+Week 6
+
+Problem 1 - GoodHours
+
+From my understanding of the problem, there are three differnt ways to split each time on the clock up to determine if it is a good time. h1 = h2*m1*m2, h1*h2 = m1*m2 and h1*h2*m1 = m2.
+so to solve this problem i would look at the possible times in the range and check if at least one of those three options was a viable 'good time', and if it was, increment a counter.
+I have to do more work on how i wil implement the incrementing of the time to cover all the numbers but i will think about that as i implement the code to check if a time is good or not.
+
