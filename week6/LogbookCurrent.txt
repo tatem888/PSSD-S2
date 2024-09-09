@@ -10,3 +10,10 @@ From my understanding of the problem, there are three differnt ways to split eac
 so to solve this problem i would look at the possible times in the range and check if at least one of those three options was a viable 'good time', and if it was, increment a counter.
 I have to do more work on how i wil implement the incrementing of the time to cover all the numbers but i will think about that as i implement the code to check if a time is good or not.
 
+I implemented the incrementing by checking at each point whether the lowest digit was ready to tick over back to 0, and making the way up to the larger digits, keeping the nuances of a 24 hour clock in the process
+
+
+Reflection -
+I again left myself not enough time to practice this week. I am hoping with the mid semester break coming up i will be able to reset and get back ontop of my work to tackle the second half of the semester.
+
+
