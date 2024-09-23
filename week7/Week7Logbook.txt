@@ -23,17 +23,24 @@ I was glad to have found this solution to the problem, as it made the coding pro
 In the future I am aiming to look for more elegent solutions to problems, to help make my job of coding easier and reducing the time i need to find bugs.
 
 
-Problem 2 - VeryInterestingMovie
-
-For this problem I decided to take a different approach to what i normally would. From reading the question i worked out that that a simple algorithm that simply started at the start of the row and checked 
-
-
-Problem 3 - FairWorkload
+Problem 2 - FairWorkload
 
 i initially wanted to implement a greedy algorithm that would simply iterate through the algorithm and allocate cabinets to a worker until the sum of folders in their partition exceeded the average expected folders (total number of folders divided by workers), but i realised in some cases this wouldnt return optimal and it would be difficult to ensure the correect number of partitions were made
 since it is a problem of optimising the woarkload so the maximum workload recieved is minimised, i thought of ways i could use a binary search on the searchspace of possible maximum workloads. I know that the minimum workload is just the largest single cabinet, and the maximum searchload is if one candidate handled all the cabinets..
 by going to the middle of the searchspace with each check, and testing if it is possible to partition the group with each worker having less than the maximum workload, i could efficiently search and find my optimised solution.
 I would also then be able to use the greedy search that i initially though of to check if each partition is valid. if the partition was valid with the number of workers, then i would know that i can lower the maximum, if it was invalid due, i would be able to look higher inn the search to my current point
+
+After some small bugs in my code were fixed this solution worked. I was also happy with the timeframe in which i completed the question, and i feel that under exam conditions i could have done similarly well.
+I am feeling more confident in my ability to solve problems under time pressure, which is something i think i have struggled most with during the exams. I think thinking more about the other types of data structures and algorithms that i can use has helped with this.
+
+Problem 3 - Minimal difference
+
+I picked this problem as an easier one that i am going to test myself to do under a time constraint. I will allow myself an hour to complete the problem initially, similar to the timeframe i would have under exam conditions
+
+My first thought is that i can see a fairly simple brute force solution where i firstly calculate the digit sum as i iterate the values between a and b, and keep track of the value closest to C. There may be another way to approach the question
+but for now i am going to go with this approach becasue it is solution i am very familiar with and i wasnt to complete it in a quick manner.
+
+
 
 
 
