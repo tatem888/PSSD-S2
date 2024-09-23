@@ -40,7 +40,13 @@ I picked this problem as an easier one that i am going to test myself to do unde
 My first thought is that i can see a fairly simple brute force solution where i firstly calculate the digit sum as i iterate the values between a and b, and keep track of the value closest to C. There may be another way to approach the question
 but for now i am going to go with this approach becasue it is solution i am very familiar with and i wasnt to complete it in a quick manner.
 
+i was able to complete my solution within the timeframe that i set, and while it was not some of the most readable code, which sometimes made it hard to debug and verify, i was focusing on my time to complete the solution so i am happy with the result
 
+
+Reflection
+This week i again focused on my ability to create solutions under time pressure, focusing less on the optimal implementation and just getting a solution that worked. While this isnt always going to be the best way to approach coding 
+i felt that my biggest downfall in the last exam was focusing too much on an elegant solution rather than a working one, and by practicing this i was able to improve on my speed. In time as i practice more, better solutions will be easier for me to code with the same speed,
+but that is something i can continue to practice
 
 
 
