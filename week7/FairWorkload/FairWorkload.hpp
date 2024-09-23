@@ -1,6 +1,7 @@
 #include <vector>
 #include <algorithm>
- #include <numeric>
+#include <numeric>
+#include <iostream>
 
 class FairWorkload
 {
@@ -15,17 +16,20 @@ private:
 
         for (int i = 0; i < folders.size(); i++)
         {
-            if (currentWorkload + i > maxWorkLoad){     //if adding another folder would exceed max workload
+            if (currentWorkload + folders[i] > maxWorkLoad){     //if adding another folder would exceed max workload
 
                 //move to next worker and set current folder as current workload
                  worker++;
-                 currentWorkload = i;
+                 currentWorkload = folders[i];
 
-                 if (worker > workers){ return false; }  //to many workers are needed, cant partition  
+                 if (worker > workers){ 
+                    
+                    return false; 
+                }  //to many workers are needed, cant partition  
             }
             else {
                 //add current folder to workload
-                currentWorkload += i;   
+                currentWorkload += folders[i];   
             }
         }
 
