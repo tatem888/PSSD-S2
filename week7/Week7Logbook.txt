@@ -4,7 +4,7 @@ Logbook - Tate Manning - a1821633
 
 Week 7
 
-PrefixFreeSets - Bonus Problem
+Problem 1 - PrefixFreeSets - Bonus Problem
 
 I decided to attempt the bonus problem first
 
@@ -17,4 +17,23 @@ I realised that my logic was flawed and that i actually needed to compare not ju
 
 During implementing, I worked out that if sorted alphabetically, the list of words only needed to be checked against the next word in the list. 
 If a word was a prefix of a word following it, then it wouldnt be added to the best set, and if it wasnt a prefix, it was added to the best set. The last word in the set would always be in the best set as it alphabetically cannot be the prefix of any word
-Then i could just find the length of the best set and return it
+Then i could just find the length of the best set and return it.
+
+I was glad to have found this solution to the problem, as it made the coding process alot simpler, giving me an impletation with minimal loops and comparisons. I used a helper function to help keep the main function clean, and required little revision and bugfinding due to the simple nature of the code.
+In the future I am aiming to look for more elegent solutions to problems, to help make my job of coding easier and reducing the time i need to find bugs.
+
+
+Problem 2 - VeryInterestingMovie
+
+For this problem I decided to take a different approach to what i normally would. From reading the question i worked out that that a simple algorithm that simply started at the start of the row and checked 
+
+
+Problem 3 - FairWorkload
+
+i initially wanted to implement a greedy algorithm that would simply iterate through the algorithm and allocate cabinets to a worker until the sum of folders in their partition exceeded the average expected folders (total number of folders divided by workers), but i realised in some cases this wouldnt return optimal and it would be difficult to ensure the correect number of partitions were made
+since it is a problem of optimising the woarkload so the maximum workload recieved is minimised, i thought of ways i could use a binary search on the searchspace of possible maximum workloads. I know that the minimum workload is just the largest single cabinet, and the maximum searchload is if one candidate handled all the cabinets..
+by going to the middle of the searchspace with each check, and testing if it is possible to partition the group with each worker having less than the maximum workload, i could efficiently search and find my optimised solution.
+I would also then be able to use the greedy search that i initially though of to check if each partition is valid. if the partition was valid with the number of workers, then i would know that i can lower the maximum, if it was invalid due, i would be able to look higher inn the search to my current point
+
+
+
