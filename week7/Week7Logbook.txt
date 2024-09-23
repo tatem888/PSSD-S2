@@ -1,0 +1,20 @@
+Problem Solving and Software Development S2 2024
+
+Logbook - Tate Manning - a1821633
+
+Week 7
+
+PrefixFreeSets - Bonus Problem
+
+I decided to attempt the bonus problem first
+
+I started out confused by the questios definitions of sufix free sets but once i had worked it out, i knew that i needed to check all of the possible pairs of words to see if there were forbidden.
+
+Using this, i could check all the pairs in nlog(n) time as each pair didnt matter which word comes first, you just need to check that the shorter of the two words is not a rpefix of the other.
+By collecting the valid pairs in a table of all combinations, i could then check the table find which word was compatible with the most other words, making the largest subset.
+
+I realised that my logic was flawed and that i actually needed to compare not just pairs of words butcompare a new word to the full set so i decided to implement the code by creating a subset for each word in the original set, and going through and adding other words if they still fit the set 
+
+During implementing, I worked out that if sorted alphabetically, the list of words only needed to be checked against the next word in the list. 
+If a word was a prefix of a word following it, then it wouldnt be added to the best set, and if it wasnt a prefix, it was added to the best set. The last word in the set would always be in the best set as it alphabetically cannot be the prefix of any word
+Then i could just find the length of the best set and return it
