@@ -1,0 +1,30 @@
+Problem Solving and Software Development S2 2024
+
+Logbook - Tate Manning - a1821633
+
+
+Week 8 Logbook
+
+Problem 1 - MathNumbersEasy
+
+find longest number of digits (smallest number of matches for highest number) not 0 first
+check if changing highest digit can be done with leftovers
+
+
+Problem 2 - Corporation Salary
+
+Reading this problem initially, it seemes like it should implemented recursivly, going down the chain of command to find the total sallary of thier subordinates. 
+By going through the string and finding anyone that doesnt have a subordinate and making my its way down the employement chain until it reaches a base case
+(employee with no suborditates) it will build back up with the total Salary.
+
+Recursion os not something i have worked on alot in this course so this will be a goood opportunity to practice and refresh myself
+
+Before implementing, i realised that i had no easy way of telling who was the at the top of any given heirachy, so my implementation would have to start from the bottom 
+as that is where i am able to to find workers in the tree from the relations table.
+
+That would still be a difficult way to find the total comapny salary, as i would end up with duplicates of each employee often. I decided i just needed to iterate through each employee, 
+who would find their salary nd add it to the total
+
+
+
+
