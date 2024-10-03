@@ -5,10 +5,21 @@ Logbook - Tate Manning - a1821633
 
 Week 8 Logbook
 
-Problem 1 - MathNumbersEasy
+Problem 1 - MatchNumbersEasy
 
 find longest number of digits (smallest number of matches for highest number) not 0 first
 check if changing highest digit can be done with leftovers
+
+This problem looked easy to begin, but after trying some test cases on paper it was apparent that alot of edge cases can cause incorrections in the problem.
+For example, it seems to stand out that the way to make the largest number is by prioritising the most digits in the number rather than the value of the digits, and taking the number that has the lowest amount of matches required,
+but that runs into probems if 0 has the least number of digits. It is also possible that with leftover matches, it may require the highest order digit to be changed for the optimal solution.
+
+so in order to find a solution, first, a the lowest cost non zero starting number needs to be picked. Then, the lowest cost (including zero) number should pad out the rest of the solution until there are not enough matches to create another digit. 
+Then, if there are matches left over, it needs to be checked if the highest order number can be made higher using by substituting it out and using any leftover matches.
+This will provide the optimal solution
+
+For my actual implementation, i first implemented the first two steps, so that i could check to see it worked for some solutions. Then i would implement the final optimisation that changed the highest order number if nessesary.
+
 
 
 Problem 2 - Corporation Salary
@@ -28,7 +39,8 @@ who would find their salary nd add it to the total
 I knew this solution would be quite inefficient as it would constantly be recalculating some of the employee salaries when it didnt need to, but i just wanted to implement a solution and test it on small sets,
 before implementing a DP solution that would make it much more efficient.
 
-My intitial solution worked, and allowed me to implement the DP solution with confidence that my logic was correct.
+My intitial solution worked, and allowed me to implement the DP solution with confidence that my logic was correct. Running my new code on gradescope showed me that it was significantly faster and 
+a much better implementation of the idea. I am glad to have worked on this problem as i havent practiced much dynamic programming yet.
 
 
 
