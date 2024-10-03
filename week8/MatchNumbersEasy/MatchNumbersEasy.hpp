@@ -48,13 +48,7 @@ public:
 
         int leftoverMatches = n-matchesUsed;
 
-        
-
-
-        
-
-
-
+        return optimal;
         
     } 
 };
