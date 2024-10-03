@@ -25,6 +25,12 @@ as that is where i am able to to find workers in the tree from the relations tab
 That would still be a difficult way to find the total comapny salary, as i would end up with duplicates of each employee often. I decided i just needed to iterate through each employee, 
 who would find their salary nd add it to the total
 
+I knew this solution would be quite inefficient as it would constantly be recalculating some of the employee salaries when it didnt need to, but i just wanted to implement a solution and test it on small sets,
+before implementing a DP solution that would make it much more efficient.
+
+My intitial solution worked, and allowed me to implement the DP solution with confidence that my logic was correct.
+
+
 
 
 

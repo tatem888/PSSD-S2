@@ -4,8 +4,16 @@
 class CorporationSalary
 {
 private:
-    long findCurrentSalary(int currentEmployeeNumber, std::vector<std::string> relations, int numEmployees, std::string baseEmployee){
 
+    std::vector<long> caclulatedSalaries;
+
+    long findCurrentSalary(int currentEmployeeNumber, std::vector<std::string>& relations, int numEmployees, std::string& baseEmployee){
+
+
+        //if already calculated, return
+        
+        if (caclulatedSalaries[currentEmployeeNumber] != -1)
+            return caclulatedSalaries[currentEmployeeNumber];
         
         std::string currentEmployee = relations[currentEmployeeNumber];
         long total = 0;
@@ -14,8 +22,9 @@ private:
         if (currentEmployee == baseEmployee){
 
             //return salary for base employee
-            return 1;
+            return caclulatedSalaries[currentEmployeeNumber] = 1;
         }
+
 
         //else, add and return all subordinates salary
         
@@ -28,7 +37,7 @@ private:
             };
         }
 
-        return total;
+        return  caclulatedSalaries[currentEmployeeNumber] = total;
     
     }
 
@@ -40,6 +49,7 @@ public:
 
         long total = 0;
 
+        caclulatedSalaries = std::vector<long>(numEmployees, -1);
 
         //loop over all employees
 
