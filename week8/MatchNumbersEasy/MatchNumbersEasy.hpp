@@ -13,7 +13,7 @@ public:
         int zeroCost = matches[0];
         
         //find lowest cost and index after 0
-        int lowestCostIndex;
+        int lowestCostIndex = 1;
         for (int i = 1; i < matches.size(); i++)
         {
             if (matches[i] <= matches[lowestCostIndex]){
@@ -23,7 +23,6 @@ public:
         }
 
         int lowestNonZeroCost = matches[lowestCostIndex];
-        int matchesUsed = lowestNonZeroCost;
     
 
         std::string optimal = std::to_string(lowestCostIndex);
@@ -32,21 +31,19 @@ public:
         if (zeroCost < lowestNonZeroCost){
 
             //while matches are left, append 0 to optimal
-            while (matchesUsed <= n){
+            while (n >= zeroCost){
                 optimal.append("0");
-                matchesUsed += zeroCost;
+                n -= zeroCost;
             }
 
         }
         else{
-            while (matchesUsed <= n){
+            while (n >= lowestNonZeroCost){
                 std::string str = std::to_string(lowestCostIndex);
                 optimal.append(str);
-                matchesUsed += lowestNonZeroCost;
+                n -= lowestNonZeroCost;
             }
         }
-
-        int leftoverMatches = n-matchesUsed;
 
         return optimal;
         
