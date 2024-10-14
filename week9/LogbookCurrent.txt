@@ -18,3 +18,11 @@ Problem 2 - Black and White Solitaire\
 I was again looking for a realtively easy problem so i could work quickly, and i came acros this. Initially i was a little stuck on how to find the minimum number of swaps required for the solution, as i could easily come up with some code to finmd A solution, but not the optimal one
 I then thought, that since there is only two possible states for the cards to be in, balck or white, and they must be alternating, that for a given number of cards, there is only two possible solutions, and all i had to do was find whihc of those two solutions would require the least
 number of swaps to achieve it. Therefore, i decided to implement a program that would count how many turns it would require for each solution to be valid, and at the end i could take the minimum of those configurations ad have my min solution
+
+This implementation was fairly simple and i didnt run into any problems during my implementation
+
+Problem 3 Cat Polka
+
+For this problem, my uunderstanding is that the leftmost and rightmost cat should attempt to move towards eachother to get the best solution. there may also be some edge cases where cats in the middle could ruin it by movbing the wrong way, so they need to be accounted for took
+my though is to take the average of the sum of all cat coordinates, and the each cat should move in the direction that moves it towards the average, as this will get all cats to head towards the same direction without using an arbitrary number like 0 that may not be optimal for all solutions
+
