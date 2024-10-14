@@ -14,8 +14,8 @@ public:
             
             std::string currentSwapString = swaps[i];
 
-            int num1 = currentSwapString[0];
-            int num2 = currentSwapString[2];
+            int num1 = currentSwapString[0] - '0';
+            int num2 = currentSwapString[2] - '0';
 
             if (currentPosition == num1){
                 currentPosition = num2;
