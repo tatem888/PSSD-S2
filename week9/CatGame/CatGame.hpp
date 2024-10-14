@@ -1,6 +1,7 @@
 #include <vector>
 #include <numeric>
 #include <algorithm>
+#include <iostream>
 
 class CatGame
 {
@@ -11,19 +12,25 @@ public:
 
         //get mean of all coordinates
         int numCats = coordinates.size();
-        int avgPosition = std::reduce(coordinates.begin(), coordinates.end()) / numCats;
+
+        std::sort(coordinates.begin(), coordinates.end());
+        int medianPosition = coordinates[numCats/2];
 
        
         //loop over and move cat towards median
         for (int i = 0; i < numCats; i++){
             
-            if (coordinates[i] >= X){
+            if (coordinates[i] >= medianPosition){
                 
                 coordinates[i] -= X;
             }
             else {
                 coordinates[i] += X;
             } 
+        }
+
+        for (int i = 0; i < numCats; i++){
+            std::cout << coordinates[i] << std::endl;
         }
 
         int max = *std::max_element(coordinates.begin(), coordinates.end());
