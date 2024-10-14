@@ -40,10 +40,11 @@ public:
             } 
         }
 
+        /* test
         for (int i = 0; i < numCats; i++)
         {
             std::cout << coordinates[i] << " ";
-        }
+        }*/
         
 
         int max = *std::max_element(coordinates.begin(), coordinates.end());

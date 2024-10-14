@@ -26,3 +26,4 @@ Problem 3 Cat Polka
 For this problem, my uunderstanding is that the leftmost and rightmost cat should attempt to move towards eachother to get the best solution. there may also be some edge cases where cats in the middle could ruin it by movbing the wrong way, so they need to be accounted for took
 my though is to take the average of the sum of all cat coordinates, and the each cat should move in the direction that moves it towards the average, as this will get all cats to head towards the same direction without using an arbitrary number like 0 that may not be optimal for all solutions
 
+When implementin
