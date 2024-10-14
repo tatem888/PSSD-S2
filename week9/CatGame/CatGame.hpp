@@ -1,12 +1,10 @@
 #include <vector>
 #include <numeric>
 #include <algorithm>
-#include <iostream>
+
 
 class CatGame
 {
-private:
-    /* data */
 public:
     int getNumber(std::vector<int> coordinates, int X){
 
@@ -27,10 +25,6 @@ public:
             else {
                 coordinates[i] += X;
             } 
-        }
-
-        for (int i = 0; i < numCats; i++){
-            std::cout << coordinates[i] << std::endl;
         }
 
         int max = *std::max_element(coordinates.begin(), coordinates.end());
