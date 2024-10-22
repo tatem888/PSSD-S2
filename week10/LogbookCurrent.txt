@@ -16,4 +16,16 @@ after fixing a small bug in my for loop, my implementation worked and i was able
 
 Problem 2 - BigBurger
 To find the max wait time, I will keep track of a current 'time' variable that will increment with each service time. Once the previous element has been checked, the next element will compare the current 'time' to the customers arrived time
-this problemt seems straight foward and i will just have to make srue i am comparng the right tims to eachother
+this problemt seems straight foward and i will just have to make srue i am comparng the right tims to eachother.
+
+This approach worked well, and was relatively efficient. I was careful in ensuring that i did each step of comparing and adding the times in order, which was helped by drawing a diagram. In the end i was able to quickly solve the problem without any bugs or issues
+
+Problem 3 - Bridge sort
+
+my idea to solve this problem was to assign a value to each card based on its contents, the lower values would be assigned to the cards ordered first ina  completely sorted deck. for example the C2 card will be given the value 0 as it is the first card in any sequence, and SA will be 51 as its the last card
+C=0, D = 12,    
+
+i will loop over the unsorted array, taking each card and assigning a key to it depending on its values. These keys can be stored in a map, which will then be gone throught to create the sorted Strings
+
+i will use a map, which i can then use to add any values used back into th output Strings
+
