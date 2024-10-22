@@ -1,0 +1,14 @@
+Problem Solving and Software Development S2 2024
+
+Logbook - Tate Manning - a1821633
+
+
+week 10
+
+This week i was wokring on my coding speed again in order to practice for the practical exam, so i set myself time limits when picking the problems,and attempted to go with the first solution i could think, even if it may no be the most elegant
+
+Problem 1 - Different Strings 
+
+This problem, i first thought that i would have to search through alot of combinations to make find whihc words had the minimum distance, but i realised that i could just take A (the shorter or equal sized word) and compare it to any possible substring in B
+as this would be the only possible differences in thw word, as the characters added before or after are arbitrary as they can be whatever we need them to be to make it match. i went ahead with implementing this in a simple brute force search of all substrings, comparing them and returning the minimum
+
