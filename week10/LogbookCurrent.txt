@@ -12,3 +12,8 @@ Problem 1 - Different Strings
 This problem, i first thought that i would have to search through alot of combinations to make find whihc words had the minimum distance, but i realised that i could just take A (the shorter or equal sized word) and compare it to any possible substring in B
 as this would be the only possible differences in thw word, as the characters added before or after are arbitrary as they can be whatever we need them to be to make it match. i went ahead with implementing this in a simple brute force search of all substrings, comparing them and returning the minimum
 
+after fixing a small bug in my for loop, my implementation worked and i was able to solve this problem very quickly with full marks
+
+Problem 2 - BigBurger
+To find the max wait time, I will keep track of a current 'time' variable that will increment with each service time. Once the previous element has been checked, the next element will compare the current 'time' to the customers arrived time
+this problemt seems straight foward and i will just have to make srue i am comparng the right tims to eachother
