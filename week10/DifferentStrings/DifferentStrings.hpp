@@ -20,7 +20,7 @@ public:
         {
             int substringDifference = 0;
 
-            for (int j = 0; i < ALength; i++)
+            for (int j = 0; j < ALength; j++)
             {
                 if (A[j] != B[i+j])
                 {
